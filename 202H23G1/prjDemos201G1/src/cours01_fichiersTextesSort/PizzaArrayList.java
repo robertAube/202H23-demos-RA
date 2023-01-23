@@ -32,6 +32,13 @@ public class PizzaArrayList {
         }
     }
 
+    public void trier() {
+        listPizza.sort(Comparator.naturalOrder()); //Doit implemter Comparable à Pizza: pour être capable de comparer 2 pizza et les trier
+    }
+    public void trierInverser() {
+        listPizza.sort(Comparator.reverseOrder()); //Doit implemter Comparable à Pizza: pour être capable de comparer 2 pizza et les trier
+    }
+
     @Override
     public String toString() {
         return "PizzaArrayList{" +

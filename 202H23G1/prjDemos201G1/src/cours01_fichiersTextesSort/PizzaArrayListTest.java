@@ -12,7 +12,10 @@ public class PizzaArrayListTest {
         afficherDesPizzas();
         avancerDesPizzas();;
         afficherDesPizzas();
-        testerRetirerPizza();
+//        testerRetirerPizza();
+        listPizza.trier();
+        afficherDesPizzas();
+        listPizza.trierInverser();
         afficherDesPizzas();
     }
 

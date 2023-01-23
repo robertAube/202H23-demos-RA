@@ -1,6 +1,6 @@
 package cours01_fichiersTextesSort;
 
-public class Pizza  {
+public class Pizza implements Comparable<Pizza> {
     public static final int VITESSE_MIN = 0;
     public static final int VITESSE_MAX = 50;
 
@@ -100,5 +100,10 @@ public class Pizza  {
         if (vitesse != pizza.vitesse) return false;
         if (position != null ? !position.equals(pizza.position) : pizza.position != null) return false;
         return couleur != null ? couleur.equalsIgnoreCase(pizza.couleur) : pizza.couleur == null;
+    }
+
+    @Override
+    public int compareTo(Pizza o) {
+        return this.couleur.compareTo(o.couleur);
     }
 }
