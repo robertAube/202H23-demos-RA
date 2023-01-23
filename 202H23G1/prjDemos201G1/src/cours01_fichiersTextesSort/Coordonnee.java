@@ -1,4 +1,4 @@
-package Cours26_ArrayList;
+package cours01_fichiersTextesSort;
 
 public class Coordonnee {
     public static final int MIN_XY = 0;

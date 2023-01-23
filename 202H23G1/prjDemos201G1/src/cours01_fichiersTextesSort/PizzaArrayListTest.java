@@ -1,4 +1,4 @@
-package Cours26_ArrayList;
+package cours01_fichiersTextesSort;
 
 /**
  * @author Robert Aubé
@@ -13,6 +13,7 @@ public class PizzaArrayListTest {
         avancerDesPizzas();;
         afficherDesPizzas();
         testerRetirerPizza();
+        afficherDesPizzas();
     }
 
     private void testerRetirerPizza() {
@@ -23,11 +24,11 @@ public class PizzaArrayListTest {
     }
 
     private void ajouterDesPizzas() {
-        listPizza.ajouterPizza(new Pizza(1,1,"bleu", 4));
+        listPizza.ajouterPizza(new Pizza(1,1,"bleu", 1));
         listPizza.ajouterPizza(new Pizza(1,1,"rouge", 4));
-        listPizza.ajouterPizza(new Pizza(1,1,"jaune", 4));
+        listPizza.ajouterPizza(new Pizza(1,1,"jaune", 2));
         listPizza.ajouterPizza(new Pizza(1,1,"verte", 4));
-        listPizza.ajouterPizza(new Pizza(1,1,"mauve", 4));
+        listPizza.ajouterPizza(new Pizza(1,1,"mauve", 3));
     }
     private void afficherDesPizzas() {
         System.out.println(listPizza.toString());

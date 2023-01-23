@@ -1,6 +1,7 @@
-package Cours26_ArrayList;
+package cours01_fichiersTextesSort;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 
 /**
  * @author Robert Aubé
@@ -8,7 +9,6 @@ import java.util.ArrayList;
  */
 public class PizzaArrayList {
     private ArrayList<Pizza> listPizza;
-    private ArrayList<Integer> listEntier;
 
     public PizzaArrayList() {
         this.listPizza = new ArrayList<Pizza>();
@@ -18,13 +18,14 @@ public class PizzaArrayList {
         listPizza.add(p);
     }
 
-
     public void enleverPizza(int i) {
         listPizza.remove(i);
     }
+
     public void enleverPizza(Pizza p) {
         listPizza.remove(p);
     }
+
     public void avancerToutesLesPizzas() {
         for (int i = 0; i < listPizza.size(); i++) {
             listPizza.get(i).avancerX();

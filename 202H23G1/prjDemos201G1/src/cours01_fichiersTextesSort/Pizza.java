@@ -1,10 +1,6 @@
-package Cours26_ArrayList;
+package cours01_fichiersTextesSort;
 
-public class Pizza {
-    //constante : valeur nommée qui ne peut pas être changée. Le nom doit être en majuscule.
-    //static : appartient à classe : durée vie infinie!
-    //final : la variable est intialisée et ne pourra jamais être changée
-
+public class Pizza  {
     public static final int VITESSE_MIN = 0;
     public static final int VITESSE_MAX = 50;
 
@@ -18,12 +14,9 @@ public class Pizza {
     private String couleur;
 
     Pizza(int x, int y, String couleur, int vitesse) {
-//        this.x = x; à ne pas faire...
-//        this.y = y;
         position = new Coordonnee(x, y);
         this.couleur = couleur;
         setVitesse(vitesse);
-        String s;
     }
 
     //mutateur
@@ -59,7 +52,7 @@ public class Pizza {
         return couleur;
     }
 
-    //surcharge : 2 méthodes avec le même nom mais des arguments différents. On dira aussi que la signature est différente.
+    //Surcharge : 2 méthodes avec le même nom, mais des arguments différents. On dira aussi que la signature est différente.
     public void setXY(int x, int y) {
         position.move(x, y);
     }
@@ -108,31 +101,4 @@ public class Pizza {
         if (position != null ? !position.equals(pizza.position) : pizza.position != null) return false;
         return couleur != null ? couleur.equalsIgnoreCase(pizza.couleur) : pizza.couleur == null;
     }
-
-    @Override
-    public int hashCode() {
-        int result = position != null ? position.hashCode() : 0;
-        result = 31 * result + vitesse;
-        result = 31 * result + (couleur != null ? couleur.hashCode() : 0);
-        return result;
-    }
-//    @Override
-//    public boolean equals(Object o) {
-//        if (this == o) { //si c'est la même instance
-//            return true;
-//        }
-//        if (o == null) { //si L'objet reçu en argument est null
-//            return false;
-//        }
-//        if (getClass() != o.getClass()) { //si this est de même type que o
-//            return false;
-//        }
-//
-//        Pizza pizza = (Pizza) o; //
-//
-//        if (vitesse != pizza.vitesse) {
-//            return false;
-//        }
-//        return couleur.equalsIgnoreCase(pizza.couleur);
-//    }
 }
