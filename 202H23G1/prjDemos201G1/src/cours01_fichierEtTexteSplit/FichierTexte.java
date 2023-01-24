@@ -1,4 +1,4 @@
-package cours01_fichierTexteSplit;
+package cours01_fichierEtTexteSplit;
 
 import java.io.*;
 import java.util.ArrayList;
