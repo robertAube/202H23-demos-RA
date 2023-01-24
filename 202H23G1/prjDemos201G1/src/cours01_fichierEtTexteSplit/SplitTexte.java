@@ -1,4 +1,4 @@
-package fichier;
+package cours01_fichierTexteSplit;
 
 public class SplitTexte {
     public SplitTexte() {

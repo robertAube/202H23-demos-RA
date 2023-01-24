@@ -1,13 +1,12 @@
-package fichier;
+package cours01_fichierTexteSplit;
 
 import java.io.*;
-import java.nio.Buffer;
 import java.util.ArrayList;
 import java.util.Comparator;
 
 public class FichierTexte {
     private static char fSep = File.separatorChar;
-    private static String path = System.getProperty("user.dir") + fSep + "src" + fSep + "fichier" + fSep;
+    private static String path = System.getProperty("user.dir") + fSep + "src" + fSep + "fichiers" + fSep;
 
     private ArrayList<String> listeExpressions;
 
