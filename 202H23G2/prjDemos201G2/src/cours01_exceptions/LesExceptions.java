@@ -8,7 +8,6 @@ public class LesExceptions {
         throw new ArithmeticException("Test exception");
     }
 
-
     public static void main(String[] args) {
         new LesExceptions();
     }

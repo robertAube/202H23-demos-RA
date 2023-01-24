@@ -1,8 +1,6 @@
 package cours01_fichierEtTexteSplit;
 
-import java.io.*;
 import java.util.ArrayList;
-import java.util.Comparator;
 
 public class FichierTexte {
     private ArrayList<String> listeExpressions;
