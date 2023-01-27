@@ -103,7 +103,8 @@ public class Pizza implements Comparable<Pizza> {
     }
 
     @Override
-    public int compareTo(Pizza o) {
-        return this.couleur.compareTo(o.couleur);
+    public int compareTo(Pizza pizza) {
+//        return this.couleur.compareTo(pizza.couleur);
+        return this.vitesse - pizza.vitesse;
     }
 }

@@ -2,6 +2,7 @@ package cours01_fichierEtTexteSplit;
 
 import java.io.*;
 import java.util.ArrayList;
+import java.util.Comparator;
 
 public class FichierTexte {
     private static char fSep = File.separatorChar;
@@ -14,11 +15,17 @@ public class FichierTexte {
         listeExpressions = new ArrayList<>();
         lireFichier(path + "expressions.txt");
         afficher();
-        trier();
+        trier(true);
         ecrireFichier(path + "expressionsOut.txt");
     }
 
-    private void trier() {
+    private void trier(boolean inverse) {
+        if (inverse) {
+            listeExpressions.sort(Comparator.reverseOrder());
+        }
+        else {
+            listeExpressions.sort(Comparator.naturalOrder());
+        }
     }
 
     private void ecrireFichier(String nomFichier) {
@@ -30,7 +37,7 @@ public class FichierTexte {
             sortie.flush(); // vider les buffer et écrire dans le fichier immédatement (à faire au besoin)
             sortie.close(); //fermeture du fichier
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            System.out.println("Erreur d'écritutre de fichier");;
         }
     }
 

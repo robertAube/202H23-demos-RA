@@ -33,10 +33,10 @@ public class PizzaArrayList {
     }
 
     public void trier() {
-        listPizza.sort(Comparator.naturalOrder()); //Doit implémenter Comparable à Pizza: pour être capable de comparer 2 pizzas et les placer dans l'ordre voulu.
+        listPizza.sort(Comparator.naturalOrder());
     }
     public void trierInverser() {
-        listPizza.sort(Comparator.reverseOrder()); //Doit implémenter Comparable à Pizza: pour être capable de comparer 2 pizzas et les placer dans l'ordre voulu.
+        listPizza.sort(Comparator.reverseOrder());
     }
 
     @Override
