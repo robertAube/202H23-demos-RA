@@ -54,10 +54,6 @@ public class Carre {
         return cote == carre.cote;
     }
 
-    @Override
-    public int hashCode() {
-        return cote;
-    }
 
     public String toString() {
         return (super.toString()
