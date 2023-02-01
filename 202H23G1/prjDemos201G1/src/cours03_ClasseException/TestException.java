@@ -1,4 +1,4 @@
-package cours02_ClasseException;
+package cours03_ClasseException;
 
 public class TestException {
     public TestException() {
