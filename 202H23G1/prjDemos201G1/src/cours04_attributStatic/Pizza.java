@@ -13,10 +13,18 @@ public class Pizza implements Comparable<Pizza> {
     private int vitesse;
     private String couleur;
 
+    private static int cpt = 0;
+
     Pizza(int x, int y, String couleur, int vitesse) {
         position = new Coordonnee(x, y);
         this.couleur = couleur;
         setVitesse(vitesse);
+
+        cpt++;
+    }
+
+    public static int getCPT() {
+        return cpt;
     }
 
     //mutateur
