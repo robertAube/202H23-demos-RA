@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"cours01_exceptions"},{"l":"cours01_fichierEtTexteSplit"},{"l":"cours01_sortInterfaceComparable"},{"l":"cours03_monException"},{"l":"cours04_vaiablbleDeClasseStatic"}];updateSearchResults();

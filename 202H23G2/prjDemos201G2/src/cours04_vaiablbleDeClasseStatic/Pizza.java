@@ -1,8 +1,21 @@
-package cours01_sortInterfaceComparable;
+package cours04_vaiablbleDeClasseStatic;
 
+/**
+ * C'est une pizza dans un jeu
+ * @author Robert Aubé
+ * @version 1.0
+ */
 public class Pizza implements Comparable<Pizza> {
+    /**
+     * vitesse minimum
+     */
     public static final int VITESSE_MIN = 0;
     public static final int VITESSE_MAX = 50;
+
+    /**
+     * Représente le nombre d'instances créé. À la destruction le nombre demeure ne dimiinuew pas
+     */
+    private static int nbInstance = 0;
 
     // vitesse est entre 0 et 50
 
@@ -13,11 +26,25 @@ public class Pizza implements Comparable<Pizza> {
     private int vitesse;
     private String couleur;
 
+    /**
+     * Intialise une pizza
+     * @param x position X
+     * @param y position y
+     * @param couleur couleur de la pizza
+     * @param vitesse vitesse de déplacement
+     */
     Pizza(int x, int y, String couleur, int vitesse) {
         position = new Coordonnee(x, y);
         this.couleur = couleur;
         setVitesse(vitesse);
+
+        nbInstance++;
     }
+
+    public static int getNbInstance() {
+        return nbInstance;
+    }
+
 
     //mutateur
     public void setVitesse(int vitesse) {
@@ -28,6 +55,11 @@ public class Pizza implements Comparable<Pizza> {
         }
     }
 
+    /**
+     * valide la vitesse
+     * @param vitesse citesse qui est validé
+     * @return vrai si la vitesse est valide
+     */
     public static boolean estValideVitesse(int vitesse) {
         return VITESSE_MIN <= vitesse && vitesse <= VITESSE_MAX;
     }

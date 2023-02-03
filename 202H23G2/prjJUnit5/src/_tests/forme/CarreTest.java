@@ -6,9 +6,9 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class CarreTest {
 
-    private Carre c1;
+    private static Carre c1;
     @BeforeAll
-    void init() {
+    static void init() {
         c1 = new Carre();
 
     }

@@ -1,4 +1,4 @@
-package cours01_sortInterfaceComparable;
+package cours04_vaiablbleDeClasseStatic;
 
 import java.util.ArrayList;
 import java.util.Comparator;

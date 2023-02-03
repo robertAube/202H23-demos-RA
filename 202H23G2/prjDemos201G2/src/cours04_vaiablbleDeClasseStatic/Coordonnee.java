@@ -1,4 +1,4 @@
-package cours01_sortInterfaceComparable;
+package cours04_vaiablbleDeClasseStatic;
 
 public class Coordonnee {
     public static final int MIN_XY = 0;

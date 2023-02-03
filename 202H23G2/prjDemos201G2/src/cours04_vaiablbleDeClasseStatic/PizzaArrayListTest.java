@@ -1,4 +1,4 @@
-package cours01_sortInterfaceComparable;
+package cours04_vaiablbleDeClasseStatic;
 
 /**
  * @author Robert Aubé
