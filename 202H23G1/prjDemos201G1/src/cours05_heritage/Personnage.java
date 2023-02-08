@@ -1,7 +1,7 @@
 package cours05_heritage;
 
 public abstract class Personnage {
-    protected String nom; //protected = accesseur qui donne accès aux classes qui en hérite (pas la meilleur chose à faire on devrait
+    protected String nom; //protected = accesseur qui donne accès aux classes qui en héritent (pas la meilleure chose à faire on devrait
     private int ptsDeVie;
 
     public Personnage(String nom, int ptsDeVie) {
