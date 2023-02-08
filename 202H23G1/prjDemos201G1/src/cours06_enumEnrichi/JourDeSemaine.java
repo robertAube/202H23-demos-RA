@@ -3,7 +3,22 @@ package cours06_enumEnrichi;
 public class JourDeSemaine {
     public JourDeSemaine() {
 //        demoSwitch();
-        demoEnum();
+ //       demoEnum();
+        demoCours202();
+    }
+
+    private void demoCours202() {
+        JourSemaine jourS;
+
+        jourS = JourSemaine.MARDI;
+
+        System.out.println(jourS.name());
+        System.out.println(jourS.ordinal());
+        System.out.println(jourS.getNom());
+        System.out.println(jourS.getNo());
+        System.out.println(jourS.getLeNom());
+        System.out.println(jourS.getAbreviaiton());
+        System.out.println(jourS.getDescription());
     }
 
     private void demoEnum() {
@@ -13,13 +28,9 @@ public class JourDeSemaine {
 
         System.out.println(quelJour(jourS));
 
-        System.out.println(jourS.getNom() + ", " + jourS.getNo());
-
         jourS = JourSemaine.DIMANCHE;
 
         System.out.println(quelJour(jourS));
-
-        System.out.println(jourS.getNom() + ", " + jourS.getNo());
     }
 
     public void demoSwitch() {
