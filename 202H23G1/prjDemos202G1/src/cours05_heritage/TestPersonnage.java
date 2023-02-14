@@ -16,6 +16,7 @@ public class TestPersonnage {
 
     private void rencontrer() {
         for (int i = 0; i < listePersonnage.size() - 1; i++) {
+            //Quelle méthode rencontrer() sera exécutée? Ce sera définit à l'exécution avec le type de l'instance: polymorphisme
             listePersonnage.get(i).rencontrer(listePersonnage.get(i + 1));
        }
     }
