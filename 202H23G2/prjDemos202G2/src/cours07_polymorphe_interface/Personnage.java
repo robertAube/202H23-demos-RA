@@ -1,12 +1,18 @@
 package cours07_polymorphe_interface;
 
-public abstract class Personnage {
+import java.io.Serializable;
+
+public abstract class Personnage implements Comparable<Personnage>, Serializable {
     private int ptsVie;
     private String nom;
 
     public Personnage(String nom, int ptsVie) {
         this.ptsVie = ptsVie;
         this.nom = nom;
+    }
+
+    public int compareTo(Personnage  o) {
+        return nom.compareTo(o.nom);
     }
 
     protected String getNom() { //protected = accessible dans la classe et dans les sous classe
@@ -27,8 +33,8 @@ public abstract class Personnage {
     @Override
     public String toString() {
         //todo on aimerait que ce soit vraiment le type de l'objet qui soit affiché
-        return "Personnage{" +
-                "ptsVie=" + ptsVie +
+        return this.getClass().getSimpleName() +
+                "{ptsVie=" + ptsVie +
                 ", Nom='" + nom + '\'' +
                 '}';
     }
