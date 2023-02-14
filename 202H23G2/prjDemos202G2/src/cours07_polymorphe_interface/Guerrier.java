@@ -25,6 +25,6 @@ public class Guerrier extends Personnage implements Vivant {
 
     @Override
     public void manger() {
-        System.out.println("Mange beaucoup et ce n'Est pas propre");
+        System.out.println("Mange beaucoup et ce n'est pas propre");
     }
 }

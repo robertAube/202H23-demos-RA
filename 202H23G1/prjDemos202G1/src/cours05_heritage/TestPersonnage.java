@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import static _utilitaire.Utilitaire.getRandomInRange;
 
 public class TestPersonnage {
-    private static final String[] tabNom = {"Cronos", "Eurydice", "Calliope", "Méduse", "Eurybatos", "Briarée", "Agamemnon", "Eurysthée", "Brontès", "Perséphone", "Déjanire"};
+    private static final String[] tabNom = {"Tom", "Jacob", "Bronto", "Méduse", "Doom", "Yvon", "Agamemnon", "Eurysthée", "Brontès", "Perséphone", "Déjanire"};
     private ArrayList<Personnage> listePersonnage;
 
     public TestPersonnage() {
@@ -18,7 +18,7 @@ public class TestPersonnage {
         for (int i = 0; i < listePersonnage.size() - 1; i++) {
             //Quelle méthode rencontrer() sera exécutée? Ce sera définit à l'exécution avec le type de l'instance: polymorphisme
             listePersonnage.get(i).rencontrer(listePersonnage.get(i + 1));
-       }
+        }
     }
 
     private void test2() {
@@ -44,23 +44,23 @@ public class TestPersonnage {
     private void initListePersonnage(int nbPersonnage) {
         listePersonnage = new ArrayList<>();
         for (int i = 0; i < nbPersonnage; i++) {
-            listePersonnage.add(getRandomPersonnage(i));
+            listePersonnage.add(getRandomPersonnage(i % tabNom.length));
         }
     }
 
-    private Personnage getRandomPersonnage(int noNom) {
+    private Personnage getRandomPersonnage(int noNomPersonnage) {
         Personnage p;
-        int no = getRandomInRange(0, 2);
+        int noTypePersonnage = getRandomInRange(0, 2);
         int nbPtsVie = getRandomInRange(10, 100);
-        switch (no) {
+        switch (noTypePersonnage) {
             case 0:
-                p = new Guerrier(tabNom[noNom], nbPtsVie);
+                p = new Guerrier(tabNom[noNomPersonnage], nbPtsVie);
                 break;
             case 1:
-                p = new Paysan(tabNom[noNom], nbPtsVie);
+                p = new Paysan(tabNom[noNomPersonnage], nbPtsVie);
                 break;
             case 2:
-                p = new Medecin(tabNom[noNom], nbPtsVie);
+                p = new Medecin(tabNom[noNomPersonnage], nbPtsVie);
                 break;
             default:
                 throw new RuntimeException("Numéro de personnage hors limite");
