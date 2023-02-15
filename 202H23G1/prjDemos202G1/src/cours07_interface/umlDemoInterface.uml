@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>cours07_interface.Medecin</OriginalElement>
+  <nodes>
+    <node x="450.0379701988613" y="163.1948167030776">cours07_interface.Vivant</node>
+    <node x="197.2708842904507" y="278.0680290070396">cours07_interface.Medecin</node>
+    <node x="174.66891367432652" y="-14.500803932575792">cours07_interface.Personnage</node>
+    <node x="458.27056004959445" y="277.44709299310836">cours07_interface.Paysan</node>
+    <node x="-63.68343146730908" y="280.6654038568443">cours07_interface.Guerrier</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="cours07_interface.Paysan" target="cours07_interface.Vivant" relationship="REALIZATION">
+      <point x="-99.99956004959444" y="-9.299310835331198E-5" />
+      <point x="424.0" y="337.947" />
+      <point x="424.0" y="190.195" />
+      <point x="-61.99997019886126" y="1.8329692240826034E-4" />
+    </edge>
+    <edge source="cours07_interface.Paysan" target="cours07_interface.Personnage" relationship="GENERALIZATION">
+      <point x="4.399504055641046E-4" y="-60.50009299310835" />
+      <point x="558.271" y="248.0" />
+      <point x="281.169" y="248.0" />
+      <point x="8.632567349309284E-5" y="115.99980393257579" />
+    </edge>
+    <edge source="cours07_interface.Guerrier" target="cours07_interface.Personnage" relationship="GENERALIZATION">
+      <point x="4.314673090775045E-4" y="-50.000403856844315" />
+      <point x="36.317" y="248.0" />
+      <point x="281.169" y="248.0" />
+      <point x="8.632567349309284E-5" y="115.99980393257579" />
+    </edge>
+    <edge source="cours07_interface.Medecin" target="cours07_interface.Vivant" relationship="REALIZATION">
+      <point x="100.0001157095493" y="-2.9007039643147436E-5" />
+      <point x="424.0" y="338.568" />
+      <point x="424.0" y="190.195" />
+      <point x="-61.99997019886126" y="1.8329692240826034E-4" />
+    </edge>
+    <edge source="cours07_interface.Medecin" target="cours07_interface.Personnage" relationship="GENERALIZATION">
+      <point x="1.1570954927719868E-4" y="-60.50002900703964" />
+      <point x="297.27099999999996" y="248.0" />
+      <point x="281.169" y="248.0" />
+      <point x="8.632567349309284E-5" y="115.99980393257579" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="1.5" showDependencies="false" x="307.5" y="202.5" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Constructors</Category>
+    <Category>Fields</Category>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
