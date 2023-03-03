@@ -1,4 +1,4 @@
-package cours10_Exceptions;
+package cours11_Exceptions;
 
 /*
  * La hiérarchie partielle des Exceptions en Java:
@@ -21,77 +21,84 @@ package cours10_Exceptions;
  */
 public class DemoExceptions {
     public DemoExceptions() {
-        // testerLancerUneException();
-        // demoExceptionPlusieursCatchs();
-        // demoClauseFinally();
+        //testerLancerUneException();
+        //demoExceptionPlusieursCatchs();
+        //demoClauseFinally();
         demoClauseFinallySansCatch();
         System.out.println("Fin du constructeur DemoExceptions()");
     }
 
-    private void demoClauseFinallySansCatch() {
+    private void demoClauseFinallySansCatch()  {
         try {
-            throw new RuntimeException("message RuntimeException");
-        } finally {
+            throw new RuntimeException("Je suis une RuntimeException");
+        }
+        finally {
             System.out.println("Ce code est toujours exécuté!!!");
         }
+
     }
 
     private void demoClauseFinally() {
         try {
-//            lancerUneException(new RuntimeException("message RuntimeException"));
-            lancerUneException(new Exception("message Exception"));
-            //lancerUneException(new NumberFormatException("message NumberFormatException"));
-            System.out.println("après appel de lancerUneException()");
-        } catch (NumberFormatException e) {
+            lancerUneException(new NumberFormatException("Je suis une NumberFormatException"));
+            lancerUneException(new RuntimeException("Je suis une RuntimeException"));
+        }
+        catch (NumberFormatException e) {
             System.out.println("1 - " + e.getMessage());
             System.out.println(e.getClass().getSimpleName());
-        } catch (RuntimeException e) {
+        }
+        catch (RuntimeException e) {
             System.out.println("2 - " + e.getMessage());
             System.out.println(e.getClass().getSimpleName());
-        } catch (Exception e) {
-            throw new RuntimeException("Montrer que finally exécuté mais pas \"Fin demoClauseFinally()\"");
-        } finally {
+        }
+        catch (Exception e) {
+            System.out.println("3 - " + e.getMessage());
+            System.out.println(e.getClass().getSimpleName());
+        }
+        finally {
             System.out.println("Ce code est toujours exécuté!!!");
         }
 
+        System.out.println("Fin demoExceptionPlusieursCatchs()");
         System.out.println("Fin demoClauseFinally()");
     }
 
     private void demoExceptionPlusieursCatchs() {
-
         try {
-//            lancerUneException(new RuntimeException("message RuntimeException"));
-            //          lancerUneException(new Exception("message Exception"));
-            lancerUneException(new NumberFormatException("message NumberFormatException"));
-            System.out.println("après appel de lancerUneException()");
-        } catch (NumberFormatException e) {
+            lancerUneException(new NumberFormatException("Je suis une NumberFormatException"));
+            lancerUneException(new RuntimeException("Je suis une RuntimeException"));
+        }
+        catch (NumberFormatException e) {
             System.out.println("1 - " + e.getMessage());
             System.out.println(e.getClass().getSimpleName());
-        } catch (RuntimeException e) {
+        }
+        catch (RuntimeException e) {
             System.out.println("2 - " + e.getMessage());
             System.out.println(e.getClass().getSimpleName());
-        } catch (Exception e) {
+        }
+        catch (Exception e) {
             System.out.println("3 - " + e.getMessage());
             System.out.println(e.getClass().getSimpleName());
         }
+
         System.out.println("Fin demoExceptionPlusieursCatchs()");
     }
 
     private void testerLancerUneException() {
-
         try {
-            lancerUneException(new RuntimeException("message RuntimeException"));
-            System.out.println("après appel de lancerUneException()");
-        } catch (Exception e) {
+            lancerUneException(new RuntimeException("RuntimeException"));
+            System.out.println("Après appel lancerUneException()");
+        }
+        catch (Exception e ) {
             System.out.println(e.getMessage());
             System.out.println(e.getClass().getSimpleName());
         }
         System.out.println("Fin testerLancerUneException()");
     }
 
-    private void lancerUneException(Exception exception) throws Exception {
-        throw exception;
-        // System.out.println("Fin lancerUneException()"); //ne se rendrait jamais
+    private void lancerUneException(Exception exception)  throws Exception {
+      //  throw exception;
+      //  System.out.println("Fin lancerUneException()"); //impossible de s'y rendre
     }
 
     public static void main(String[] args) {
