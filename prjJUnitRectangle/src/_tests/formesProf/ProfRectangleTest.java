@@ -9,7 +9,7 @@ import java.awt.Point;
 import static org.junit.jupiter.api.Assertions.*;
 
 class ProfRectangleTest {
-    private static Rectangle[] tabRec = new Rectangle[4];
+    private static Rectangle[] tabRec = new Rectangle[5];
     private static Point[] dimRectangle = {
             new Point(Rectangle.MIN_VAL, Rectangle.MIN_VAL),
             new Point(Rectangle.MAX_VAL, Rectangle.MAX_VAL),
@@ -29,7 +29,7 @@ class ProfRectangleTest {
             Rectangle.MAX_VAL * 2 + Rectangle.MAX_VAL * 2,
             30,
             30,
-            36
+            24
     };
 
     @BeforeAll
@@ -39,12 +39,12 @@ class ProfRectangleTest {
                 tabRec[i] = new Rectangle(dimRectangle[i].x, dimRectangle[i].y);
             }
         } catch (FormeException e) {
-            fail("Problème de constructreur");
+            fail("Problème de constructeur");
         }
     }
 
     @Test
-    void  leConstructeur_LanceUneException_SiLesDimensionsDuTriangleSontInvalides() {
+    void  leConstructeur_LanceUneException_SiLesDimensionsDuRectangleSontInvalides() {
         assertThrows(FormeException.class, () -> new Rectangle(Rectangle.MIN_VAL - 1, 10));
         assertThrows(FormeException.class, () -> new Rectangle(10, Rectangle.MIN_VAL - 1));
         assertThrows(FormeException.class, () -> new Rectangle(Rectangle.MAX_VAL + 1, 10));
